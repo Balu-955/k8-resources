@@ -1,7 +1,23 @@
-kind: Namespace
 apiVersion: v1
+kind: Namespace
 metadata:
   name: expense
   labels:
     name: expense
     environment: dev
+
+
+# Namespace : Isolated workspace for the project
+
+# kubectl create namespace expense
+# kubectl get namespace/ns
+
+# kubectl apply -f <filename>
+# kubectl delete -f <filename>
+
+# kubectl get ns
+# kubectl describe ns expense
+
+# How to login to the Running container?
+
+# kubectl exec -it <container-name> -c <sp.container> --bash

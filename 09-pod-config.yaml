@@ -6,18 +6,21 @@ spec:
   containers:
     - name: nginx
       image: nginx
-      env:
-      - name: course
-        valueFrom:
-          configMapKeyRef:
-            name: daws-78
-            key: course
-      - name: trainer
-        valueFrom:
-          configMapKeyRef:
-            name: daws-78
-            key: trainer
-      
+      envFrom: # this is used to refer all the values in daws-78 in a single go
+        - configMapRef:
+            name: daws-78 
+      # env:
+      # - name: course
+      #   valueFrom:
+      #     configMapKeyRef:
+      #       name: daws-78
+      #       key: course
+      # - name: trainer
+      #   valueFrom:
+      #     configMapKeyRef:
+      #       name: daws-78
+      #       key: trainer
+            
 
               
             

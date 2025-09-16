@@ -9,4 +9,7 @@ spec:
   - name: alma
     image: "almalinux:9"
     command : ["sleep","2000"]
+
+# for alma linux there is no mechanism directly to run the container for infinite time by default. which is why we are giving sleep command.
+
     
